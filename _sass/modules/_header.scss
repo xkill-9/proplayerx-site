@@ -1,0 +1,30 @@
+// Config
+$header-bgcolor: #000;
+$header-height-lg: 400px;
+$header-height-sm: 250px;
+
+// Base
+.site-header {
+  padding-bottom: 18%; // to keep aspect ratio on window resize
+  background-repeat: no-repeat;
+  background-color: $header-bgcolor;
+  background-image: url('../images/ryu.jpg');
+  background-position: center center;
+  background-size: auto 100%;
+  @media screen and (min-width: 1680px) {
+    padding-bottom: 0;
+    height: $header-height-lg;
+  }
+  @media screen and (max-width: 850px) {
+    padding-bottom: 0;
+    height: $header-height-sm;
+  }
+}
+
+.site-logo {
+  font-size: 0;
+  svg {
+    margin: 10px;
+    height: 85px;
+  }
+}

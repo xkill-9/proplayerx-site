@@ -1,0 +1,24 @@
+// Config
+$footer-bgcolor: $mine-shaft;
+$footer-height: 85px;
+$copyright-color: $dusty-gray;
+
+// Base
+.site-footer {
+  background-color: $footer-bgcolor;
+  background-image: url(../images/lines.png);
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: 90px auto;
+}
+
+.site-footer__inner {
+  height: $footer-height;
+}
+
+.site-footer__copyright {
+  margin:0 20px;
+  color: $copyright-color;
+  font-size: 18px;
+  text-transform: uppercase;
+}

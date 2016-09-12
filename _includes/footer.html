@@ -1,0 +1,41 @@
+<footer class="site-footer l-flex-none">
+
+  <div class="site-footer__inner l-content l-row l-space-between l-center-items">
+      <div class="social-media">
+        <ul class="social-media__list">
+
+          {% if site.facebook_username %}
+          <li class="social-media__list__item">
+            {% include icon-facebook.html username=site.facebook_username %}
+          </li>
+          {% endif %}
+
+          {% if site.twitter_username %}
+          <li class="social-media__list__item">
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+          {% endif %}
+
+          {% if site.twitch_username %}
+          <li class="social-media__list__item">
+            {% include icon-twitch.html username=site.twitch_username %}
+          </li>
+          {% endif %}
+
+          {% if site.youtube_username %}
+          <li class="social-media__list__item">
+            {% include icon-youtube.html username=site.youtube_username %}
+          </li>
+          {% endif %}
+
+        </ul>
+      </div>
+
+      <div class="site-footer__copyright">
+        <p>{{ site.copyright | escape }}</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>

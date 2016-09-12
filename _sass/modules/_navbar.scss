@@ -1,0 +1,24 @@
+// Config
+$navbar-height: 95px;
+$link-color: #fff;
+$link-highlight-bgcolor: $monza;
+
+.site-nav {
+  height: $navbar-height;
+}
+
+.site-nav__link {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 10px 10px 60px;
+  color: $link-color;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover, &.current {
+    background-image: url('../images/flag-right-small.png');
+    background-repeat: no-repeat;
+    background-size: 100% 40px;
+    background-position: center left;
+  }
+}

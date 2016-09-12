@@ -1,0 +1,21 @@
+.social-media {
+  display: inline-block;
+}
+
+.social-media__list {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  list-style: none;
+}
+
+.social-media__list__item {
+  display: inline-block;
+  margin:0 5px;
+  a {
+    display: inline-block;
+  }
+  svg {
+    width: 40px;
+  }
+}
