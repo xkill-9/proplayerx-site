@@ -1,0 +1,42 @@
+// Config
+$highlight-padding-md: 60px;
+$highlight-padding-lg: 90px;
+
+// Base
+.flag-highlight {
+  background-repeat: no-repeat;
+  background-size: 100% 40px;
+  padding: 10px;
+}
+
+.flag-highlight--right {
+  @extend .flag-highlight;
+  background-image: url('../images/flag-left.png');
+  background-position: center right;
+}
+
+.flag-highlight--right--md {
+  @extend .flag-highlight--right;
+  padding-right: $highlight-padding-md;
+}
+
+.flag-highlight--right--lg {
+  @extend .flag-highlight--right;
+  padding-right: $highlight-padding-lg;
+}
+
+.flag-highlight--left {
+  @extend .flag-highlight;
+  background-image: url('../images/flag-right-small.png');
+  background-position: center left;
+}
+
+.flag-highlight--left--md {
+  @extend .flag-highlight--left;
+  padding-left: $highlight-padding-md;
+}
+
+.flag-highlight--left--lg {
+  @extend .flag-highlight--left;
+  padding-left: $highlight-padding-lg;
+}

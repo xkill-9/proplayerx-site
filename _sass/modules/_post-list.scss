@@ -1,0 +1,71 @@
+// Config
+$post-list-width: 400px;
+$post-list-item-bgcolor: #fff;
+$post-list-cover-size: 150px;
+$post-list-content-font-size: 16px;
+$post-list-type-color: $dusty-gray;
+$post-list-date-color: $dusty-gray;
+$post-list-title-color: $tundora;
+
+// Base
+.post-list {
+  width : $post-list-width;
+  margin-right: 50px;
+  margin-top: -150px;
+}
+
+.post-list__latest {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: normal;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.post-list__link {
+  text-decoration: none;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.post-list__item {
+  background-color: $post-list-item-bgcolor;
+  box-shadow: 0 4px 15px rgba(#000, .1);
+}
+
+.post-list__item__cover {
+  width: $post-list-cover-size;
+  height: $post-list-cover-size;
+}
+
+.post-list__item__cover__image {
+  width: $post-list-cover-size;
+  height: $post-list-cover-size;
+  object-fit: cover;
+}
+
+.post-list__item__content {
+  padding: 15px;
+}
+
+.post-list__item__type, .post-list__item__title {
+  margin: 0;
+  font-size: $post-list-content-font-size;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.post-list__item__title {
+  color: $post-list-title-color;
+}
+
+.post-list__item__type {
+  color: $post-list-type-color;
+}
+
+.post-list__item__date {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+  color: $post-list-date-color;
+}

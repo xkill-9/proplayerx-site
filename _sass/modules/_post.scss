@@ -1,0 +1,45 @@
+// Config
+$post-content-color: #000;
+$post-content-font-size: 18px;
+$post-font-weight: 300;
+$post-title-color: #fff;
+
+// Base
+.post {
+  padding: 120px 0;
+  margin-left: 50px;
+  position: relative;
+}
+
+.post__header {
+  position: absolute;
+  text-align: right;
+  top: -160px;
+  right: 0;
+}
+
+.post__title {
+  margin: 0;
+  display: block;
+  font-size: 34px;
+  font-weight: normal;
+  color: $post-title-color;
+}
+
+.post__type {
+  margin: 0;
+  display: inline-block;
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.post__content {
+  color: $post-content-color;
+  font-size: $post-content-font-size;
+  font-weight: $post-font-weight;
+  a {
+    color: $monza;
+  }
+}
