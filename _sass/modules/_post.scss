@@ -9,12 +9,13 @@ $post-title-color: #fff;
   padding: 120px 0;
   margin-left: 50px;
   position: relative;
+  flex-shrink: 1;
 }
 
 .post__header {
   position: absolute;
   text-align: right;
-  top: -160px;
+  top: -135px;
   right: 0;
 }
 
@@ -28,11 +29,6 @@ $post-title-color: #fff;
 
 .post__type {
   margin: 0;
-  display: inline-block;
-  color: #fff;
-  font-size: 16px;
-  font-weight: normal;
-  text-transform: uppercase;
 }
 
 .post__content {
