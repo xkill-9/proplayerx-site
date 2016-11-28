@@ -1,0 +1,44 @@
+---
+layout: default
+title: Todas las noticias
+type: noticias
+permalink: /noticias/
+paginate:
+  per_page: 5
+  permalink: /page/:num/
+---
+{% assign custom_url = site.url | append: site.baseurl %}
+{% assign full_base_url = custom_url | default: site.github.url %}
+<div class="post-index">
+  <!-- This loops through the paginated posts -->
+  {% for post in paginator.posts %}
+    <a href="{{ post.url | prepend: site.baseurl }}" class="post-list__link">
+      <div class="post-list__item l-row">
+        <div class="post-list__item__cover">
+          <img class="post-list__item__cover__image" src="{{ full_base_url }}/images/{{ post.thumbnail | default: 'default-news.jpg' }}" alt="{{ post.title | escape }}">
+        </div>
+        <div class="post-list__item__content l-flex-fill l-col l-justify-center">
+          <h1 class="post-list__item__type">{{ post.type | escape }}</h1>
+          <h3 class="post-list__item__date">{{ post.date | date: "%b %-d, %Y" }}</h3>
+          <h1 class="post-list__item__title">{{ post.title | escape }}</h1>
+          <div class="post-list__item__excerpt">{{ post.excerpt | strip_html | normalize_whitespace | truncate: 90 | escape }}</div>
+        </div>
+      </div>
+    </a>
+  {% endfor %}
+
+  <!-- Pagination links -->
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+    {% else %}
+      <span class="previous">Previous</span>
+    {% endif %}
+    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+    {% else %}
+      <span class="next ">Next</span>
+    {% endif %}
+  </div>
+</div>

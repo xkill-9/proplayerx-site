@@ -11,6 +11,11 @@ $header-height-sm: 250px;
   background-position: center center;
   background-size: auto 100%;
   height: $header-height-lg;
+  position: relative;
+}
+
+.site-header__inner {
+  position: relative;
 }
 
 .site-logo {

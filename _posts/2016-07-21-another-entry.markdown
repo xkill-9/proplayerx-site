@@ -2,7 +2,7 @@
 layout: post
 title:  "Another entry"
 type: noticia
-cover: jekyll.jpeg
+thumbnail: jekyll.jpeg
 date:   2016-07-21 13:48:21 -0500
 ---
 

@@ -1,20 +1,19 @@
 <header class="site-header l-flex-none" role="banner">
 
-  <div class="site-header__inner l-content l-row l-center-items">
+  <div class="site-header__inner l-full-height l-col l-content">
+    <div class="navbar l-row l-center-items">
+      {% assign custom_url = site.url | append: site.baseurl %}
+      {% assign full_base_url = site.github.url | default: custom_url %}
+      <a class="site-logo" href="{{ full_base_url }}/">{% include px-logo.svg %}</a>
 
-    {% assign custom_url = site.url | append: site.baseurl %}
-    {% assign full_base_url = site.github.url | default: custom_url %}
-    <a class="site-logo" href="{{ full_base_url }}/">{% include px-logo.svg %}</a>
-
-    <nav class="site-nav l-row l-center-items l-flex-fill l-justify-end">
-        <a href="{{ full_base_url }}/" class="site-nav__link {% if page.url == '/' %} current {% endif %}">Noticias</a>
-      {% for my_page in site.pages %}
-        {% if my_page.title %}
-        <a class="site-nav__link {% if page.url contains my_page.url %} current {% endif %}" href="{{ my_page.url | prepend: full_base_url }}">{{ my_page.title | escape }}</a>
-        {% endif %}
-      {% endfor %}
-    </nav>
-
+      <nav class="site-nav l-row l-center-items l-flex-fill l-justify-end">
+          <a href="{{ full_base_url }}/" class="site-nav__link {% if page.url == '/' %} current {% endif %}">Noticias</a>
+          <a class="site-nav__link {% if page.url == '/team/' %} current {% endif %}" href="/team/">ProplayerX Team</a>
+      </nav>
+    </div>
+    <div class="post__header">
+      <h3 class="post__type flag-highlight--left--md">{{ page.type  | escape }}</h3>
+      <h1 class="post__title">{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</h1>
+    </div>
   </div>
-
 </header>

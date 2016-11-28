@@ -4,6 +4,7 @@ $post-list-item-bgcolor: #fff;
 $post-list-cover-size: 150px;
 $post-list-content-font-size: 16px;
 $post-list-type-color: $dusty-gray;
+$post-list-excerpt-color: $tundora;
 $post-list-date-color: $dusty-gray;
 $post-list-title-color: $tundora;
 
@@ -12,6 +13,8 @@ $post-list-title-color: $tundora;
   width : $post-list-width;
   margin-right: 50px;
   margin-top: -150px;
+  margin-bottom: 40px;
+  z-index: 10;
 }
 
 .post-list__link {
@@ -38,9 +41,12 @@ $post-list-title-color: $tundora;
 
 .post-list__item__content {
   padding: 15px;
+  flex-shrink: 1;
 }
 
-.post-list__item__type, .post-list__item__title {
+.post-list__item__type,
+.post-list__item__title,
+.post-list__all {
   margin: 0;
   font-size: $post-list-content-font-size;
   font-weight: normal;
@@ -55,9 +61,35 @@ $post-list-title-color: $tundora;
   color: $post-list-type-color;
 }
 
+.post-list__item__excerpt {
+  font-size: 15px;
+  color: $post-list-excerpt-color;
+}
+
 .post-list__item__date {
   margin: 0;
   font-size: 14px;
   font-weight: 300;
   color: $post-list-date-color;
+}
+
+.post-list__all {
+  position: relative;
+  height: 60px;
+  padding:0 20px;
+  color: $monza;
+  box-shadow: 0 2px 5px rgba(#000, .1);
+  text-decoration: none;
+  background-image: url('../images/button-texture.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.post-list__all__arrow svg{
+  vertical-align: text-top;
+}
+
+.post-index {
+  margin: 20px auto;
+  max-width: 700px;
 }

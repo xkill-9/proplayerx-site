@@ -1,8 +1,9 @@
 // Config
-$post-content-color: #000;
-$post-content-font-size: 18px;
-$post-font-weight: 300;
-$post-title-color: #fff;
+$content-color: #000;
+$content-font-size: 18px;
+$font-weight: 300;
+$title-color: #fff;
+$title-shadow-color: #000;
 
 // Base
 .post {
@@ -15,16 +16,20 @@ $post-title-color: #fff;
 .post__header {
   position: absolute;
   text-align: right;
-  top: -135px;
+  bottom: 0;
   right: 0;
+  min-height: 137px;
+  max-width: 700px;
 }
 
 .post__title {
   margin: 0;
   display: block;
-  font-size: 34px;
+  font-size: 35px;
+  max-height: 160px;
   font-weight: normal;
-  color: $post-title-color;
+  color: $title-color;
+  text-shadow: 0px 2px 3px $title-shadow-color;
 }
 
 .post__type {
@@ -32,9 +37,9 @@ $post-title-color: #fff;
 }
 
 .post__content {
-  color: $post-content-color;
-  font-size: $post-content-font-size;
-  font-weight: $post-font-weight;
+  color: $content-color;
+  font-size: $content-font-size;
+  font-weight: $font-weight;
   a {
     color: $monza;
   }
