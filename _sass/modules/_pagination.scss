@@ -1,0 +1,42 @@
+$arrow-disabled-color: $dusty-gray;
+$arrow-hover-color: $monza;
+$pagination-height: 50px;
+$pagination-width: 240px;
+$pagination-color: $tundora;
+
+.pagination {
+  box-shadow: 0 4px 15px rgba(#000, .1);
+  height: $pagination-height;
+  width: $pagination-width;
+  margin-left: auto;
+  color: $pagination-color;
+}
+
+.arrow--disabled {
+  g {
+    stroke: $arrow-disabled-color !important;
+  }
+}
+
+.arrow {
+  width: $pagination-height;
+  text-align: center;
+  font-size: 0;
+  svg {
+    height: 15px;
+  }
+  &:hover {
+    g {
+      stroke: $arrow-hover-color;
+    }
+  }
+}
+
+.arrow--left {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}

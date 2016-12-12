@@ -26,6 +26,10 @@ $post-list-title-color: $tundora;
 .post-list__item {
   background-color: $post-list-item-bgcolor;
   box-shadow: 0 4px 15px rgba(#000, .1);
+  transition: box-shadow 0.3s;
+  &:hover {
+    box-shadow: 0 4px 15px rgba(#000, .3);
+  }
 }
 
 .post-list__item__cover {
@@ -83,10 +87,17 @@ $post-list-title-color: $tundora;
   background-image: url('../images/button-texture.png');
   background-repeat: no-repeat;
   background-size: contain;
+  transition: box-shadow 0.3s;
+  &:hover {
+    box-shadow: 0 2px 5px rgba(#000, .3);
+  }
 }
 
-.post-list__all__arrow svg{
-  vertical-align: text-top;
+.post-list__all__arrow {
+  font-size: 0;
+  svg{
+    vertical-align: text-top;
+  }
 }
 
 .post-index {

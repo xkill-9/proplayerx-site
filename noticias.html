@@ -2,7 +2,6 @@
 layout: default
 title: Todas las noticias
 type: noticias
-permalink: /noticias/
 paginate:
   per_page: 5
   permalink: /page/:num/
@@ -28,17 +27,17 @@ paginate:
   {% endfor %}
 
   <!-- Pagination links -->
-  <div class="pagination">
+  <div class="pagination l-row l-space-between l-center-items">
     {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+      <a href="{{ paginator.previous_page_path }}" class="arrow--left arrow previous previous-arrow">{% include arrow.svg %}</a>
     {% else %}
-      <span class="previous">Previous</span>
+      <span class="arrow previous previous-arrow arrow--left arrow--disabled">{% include arrow.svg %}</span>
     {% endif %}
-    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    <span class="page_number ">Página {{ paginator.page }} de {{ paginator.total_pages }}</span>
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+      <a href="{{ paginator.next_page_path }}" class="arrow next next-arrow">{% include arrow.svg %}</a>
     {% else %}
-      <span class="next ">Next</span>
+      <span class="next next-arrow arrow arrow--disabled">{% include arrow.svg %}</span>
     {% endif %}
   </div>
 </div>
