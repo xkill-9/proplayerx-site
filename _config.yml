@@ -26,10 +26,11 @@ twitch_username: px_team
 youtube_username: TeamProplayerX
 facebook_username: ProplayerX
 gems:
-  - octopress-paginate
+  - jekyll-paginate
   - jekyll-sitemap
 copyright: Proplayerx Team - 2016
-
+paginate: 5
+paginate_path: "/noticias/page:num/"
 
 
 # Build settings

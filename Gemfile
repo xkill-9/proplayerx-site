@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source "http://rubygems.org"
 ruby RUBY_VERSION
 
 # Hello! This is where you manage which Jekyll version is used to run.
@@ -22,6 +22,6 @@ gem 'github-pages'
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   # gem "jekyll-github-metadata", "~> 1.0"
-  gem 'octopress-paginate'
+  gem 'jekyll-paginate'
   gem 'jekyll-sitemap'
 end
