@@ -12,6 +12,23 @@ $header-height-sm: 250px;
   background-size: auto 100%;
   height: $header-height-lg;
   position: relative;
+  @media screen and (max-width: $content-break-lg) {
+    background-position-y: $site-navbar-height;
+  }
+  @media screen and (max-width: $content-break-md) {
+    background-position-y: $site-navbar-height;
+    background-size: auto ($header-height-lg - $site-navbar-height);
+    &:before {
+      display: block;
+      width: 100%;
+      height: $site-navbar-height;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      background-color: #000;
+    }
+  }
 }
 
 .site-header__inner {
@@ -23,5 +40,8 @@ $header-height-sm: 250px;
   svg {
     margin: 10px;
     height: 85px;
+    @media screen and (max-width: $content-break-md) {
+      height: 70px;
+    }
   }
 }

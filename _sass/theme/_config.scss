@@ -10,4 +10,10 @@ $tundora: #4A4A4A;
 $monza: #D0021B;
 $mine-shaft: #313131;
 
+$site-navbar-height: 105px;
 $content-width: 1200px !default;
+$content-width-md: 800px;
+$content-width-sm: 480px;
+$content-break-lg: $content-width;
+$content-break-md: $content-width-md;
+$content-break-sm: $content-width-sm;

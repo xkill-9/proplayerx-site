@@ -5,4 +5,10 @@
 .l-content {
   max-width: $content-width;
   margin: 0 auto;
+  @media screen and (max-width: $content-break-lg) {
+    max-width: $content-width-md;
+  }
+  @media screen and (max-width: $content-break-md) {
+    max-width: 90%;
+  }
 }

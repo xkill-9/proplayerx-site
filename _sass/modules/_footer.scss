@@ -14,6 +14,12 @@ $copyright-color: $dusty-gray;
 
 .site-footer__inner {
   height: $footer-height;
+  @media screen and (max-width: $content-break-md) {
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    padding: 10px 0;
+  }
 }
 
 .site-footer__copyright {
@@ -21,4 +27,10 @@ $copyright-color: $dusty-gray;
   color: $copyright-color;
   font-size: 18px;
   text-transform: uppercase;
+  @media screen and (max-width: $content-break-md) {
+    font-size: 16px;
+    p {
+      margin: 0;
+    }
+  }
 }
